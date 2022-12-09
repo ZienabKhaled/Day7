@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding:0;
+
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: #ccb7b0;
+}
+
+.datetime{
+color: #fff;
+background-color: rgb(106, 88, 88);
+font-family: sans-serif;
+border: 3px solid #fff;
+border-radius: 2px;
+width: 400px;
+padding: 30px;
+}
+
+.datetime:hover{
+    background-color: #873e23;
+    box-shadow: 0 0 30px #873e23;
+}
+
+.date{
+font-size: 25px;
+text-align: center;
+font-weight: 500;
+letter-spacing:3px ;
+}
+
+.time{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time span:not(:last-child){
+    position: relative;
+    text-align: center;
+    margin: 6px;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+.time span:last-child{
+    background: #5b1f09;
+    font-size:30px ;
+    font-weight: 500;
+    text-transform: uppercase ;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 3px;
+}
+
+/* 
+alarm */
+
+#clock .alarm{
+	width:16px;
+	height:16px;
+	bottom:20px;
+	background:url('../img/alarm_light.jpg');
+	position:absolute;
+	opacity:0.2;
+}
+#clock .alarm.active{
+	opacity:1;
+}
+#clock .weekdays{
+	font-size:12px;
+	position:absolute;
+	width:100%;
+	top:10px;
+	left:0;
+	text-align:center;
+}
+
+
+#clock .weekdays span{
+	opacity:0.2;
+	padding:0 10px;
+}
+
+#clock .weekdays span.active{
+	opacity:1;
+}
+
+#clock .ampm{
+	position:absolute;
+	bottom:20px;
+	right:20px;
+	font-size:12px;
+}
+
+.button-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 400px;
+	margin-top: 50px;
+}
+
+.button-section .numbers input {
+    background: none;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    width: 200px;
+    margin-right: 10px;
+    
+}
+
+button {
+    background: #E3BB18;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1.208em;
+    letter-spacing: 2px;
+	margin: 20px 10px 0 0;
+    
+}
+
+button:hover {
+    background: #E8C53A;
+    transition: 0.2s ease-in-out all;
+}
+
+#stopAlarm {visibility: hidden;
+	flex: 100%;
+	margin-top: 40px;
+	background: #a50b0b;}
+	
+	#stopAlarm:hover {
+		background: #ab3030;}
+	
+	#alarmNotice {
+		position: absolute;
+		top: 0;
+		left:0;
+		margin-left: 20px;
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+	
+	}
+    #alarmNotice i {font-size: 30px;
+        color: #E3BB18;
+        margin-right: 10px;}
+        
+        #alarmNotice span {
+            letter-spacing: 2px;
+            font-size: 1.208em;
+            font-weight: 700;
+        }
